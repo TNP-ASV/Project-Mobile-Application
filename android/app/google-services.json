@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "203230076023",
+    "project_id": "project-f785f",
+    "storage_bucket": "project-f785f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203230076023:android:4146b67aa4afa9d28c3a72",
+        "android_client_info": {
+          "package_name": "com.example.watchshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjPBQJuvJ3T-9S3TSk4zRM50HaN9LZP8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

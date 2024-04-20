@@ -23,7 +23,7 @@ class FavoritePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cart"),
+        title: Text("Favorite"),
         leading: BackButton(),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,

@@ -1,6 +1,6 @@
 {
-    "name": "project_application_1",
-    "short_name": "project_application_1",
+    "name": "watchshop",
+    "short_name": "watchshop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

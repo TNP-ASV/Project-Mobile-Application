@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:project_application_1/HomePage.dart';
-import 'package:project_application_1/Navigation_Bar.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:watchshop/Loginpage.dart';
+// import 'package:watchshop/Loginpage.dart';
+// import 'package:watchshop/Searchpage.dart';
+// import 'package:watchshop/Registerpage.dart';
+// import 'package:watchshop/ProfilePage.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+  );
+    runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  // This widget is the root of your application.
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Welcome",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Color.fromRGBO(0, 96, 57, 100)),
-      home: NavigationScreen(),
+      home: Loginpage(),
     );
   }
 }

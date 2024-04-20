@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_application_1/CartPage.dart';
-import 'package:project_application_1/container_button_model.dart';
+import 'package:watchshop/CartPage.dart';
+import 'package:watchshop/container_button_model.dart';
 
 import '../test/container_button_model.dart';
 

@@ -1,7 +1,8 @@
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:project_application_1/product_details_popup.dart';
+import 'package:watchshop/product_details_popup.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class ProductPage extends StatelessWidget {
   List<String> images = [

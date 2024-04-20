@@ -1,10 +1,10 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_application_1/CartPage.dart';
-import 'package:project_application_1/FavoritePage.dart';
-import 'package:project_application_1/HomePage.dart';
-import 'package:project_application_1/ProfilePage.dart';
+import 'package:watchshop/CartPage.dart';
+import 'package:watchshop/FavoritePage.dart';
+import 'package:watchshop/HomePage.dart';
+import 'package:watchshop/ProfilePage.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
