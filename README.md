@@ -1,16 +1,38 @@
-# watchshop
+# Luxuria Watch
 
-A new Flutter project.
+Luxuria Watch เป็นแอปพลิเคชันสำหรับการซื้อขายนาฬิกาออนไลน์ ที่ให้บริการในการเลือกซื้อนาฬิกาจากแบรนด์ชั้นนำได้อย่างสะดวกสบาย
 
-## Getting Started
+## คำอธิบาย
 
-This project is a starting point for a Flutter application.
+Luxuria Watch เป็นแอปพลิเคชันที่มุ่งเน้นให้ประสบการณ์ในการซื้อนาฬิกาออนไลน์เป็นที่น่าพอใจแก่ผู้ใช้ โดยมีคุณสมบัติที่หลากหลาย เช่น:
 
-A few resources to get you started if this is your first Flutter project:
+- การแสดงสินค้าในรูปแบบรายการและรายละเอียด
+- ระบบรวมตะกร้าสินค้าและการชำระเงิน
+- ระบบรวมการจัดการรายการโปรด
+- โปรไฟล์ผู้ใช้และการจัดการข้อมูลส่วนตัว
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## วิธีการใช้งาน
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Dowload Source Code และ ทำการ flutter pub get แล้ว Run Source Code 
+2. จากนั้น เข้าสู่ระบบด้วยบัญชีผู้ใช้หรือลงทะเบียนใหม่
+3. สำรวจและเลือกซื้อสินค้าที่คุณต้องการ
+4. เพิ่มสินค้าที่ชอบเข้าไปในรายการโปรดของคุณ
+5. ชำระเงินในตะกร้าสินค้าและรอรับสินค้าที่คุณสั่งซื้อ
+
+## คำสั่งที่จำเป็น
+
+ในการรันแอปพลิเคชัน Luxuria Watch บนเครื่องมือพัฒนาซอฟต์แวร์ของคุณ คุณต้องทำการติดตั้งซอฟต์แวร์ต่อไปนี้:
+- Flutter SDK
+- Firebase CLI
+- Dart SDK
+
+## วิธีการรัน
+
+1. โคลน repository ไปยังเครื่องของคุณ: `git clone https://github.com/username/repository.git`
+2. เปิดโปรเจคในโฟลเดอร์ WatchShop บนโปรแกรม IDE ของคุณ
+3. รันแอปพลิเคชัน Luxuria Watch ด้วยคำสั่ง `flutter run`
+
+## ผู้จัดทำ
+
+Luxuria Watch ถูกออกแบบขึ้นโดยทีมผู้พัฒนาซอฟต์แวร์ นักศึกษามหาวิทยาลัยมหิดล เพื่อประกอบโครงงานรายวิชา ITDS283 Mobile Application Development
+รายชื่อผู้จัดทำ Nuttakit Iamchamlert 6587014 , Tanapat Asavanapanon 6587016
