@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">203230076023</string>
+    <string name="google_api_key" translatable="false">AIzaSyCjPBQJuvJ3T-9S3TSk4zRM50HaN9LZP8g</string>
+    <string name="google_app_id" translatable="false">1:203230076023:android:4146b67aa4afa9d28c3a72</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCjPBQJuvJ3T-9S3TSk4zRM50HaN9LZP8g</string>
+    <string name="google_storage_bucket" translatable="false">project-f785f.appspot.com</string>
+    <string name="project_id" translatable="false">project-f785f</string>
+</resources>

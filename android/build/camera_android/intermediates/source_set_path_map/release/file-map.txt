@@ -1,0 +1,13 @@
+io.flutter.plugins.camera.camera_android-jetified-annotation-experimental-1.1.0-0 C:\Users\V1CK\.gradle\caches\transforms-3\257e0bb88528f5fc66bfd853728809aa\transformed\jetified-annotation-experimental-1.1.0\res
+io.flutter.plugins.camera.camera_android-jetified-window-1.0.0-beta04-1 C:\Users\V1CK\.gradle\caches\transforms-3\6582e67aea0be70979c64a0bfb01e347\transformed\jetified-window-1.0.0-beta04\res
+io.flutter.plugins.camera.camera_android-core-1.6.0-2 C:\Users\V1CK\.gradle\caches\transforms-3\974b4f2252348b5ef43741b27d416a49\transformed\core-1.6.0\res
+io.flutter.plugins.camera.camera_android-jetified-window-java-1.0.0-beta04-3 C:\Users\V1CK\.gradle\caches\transforms-3\9b0dd0bee9a81680af20f56797c52ab1\transformed\jetified-window-java-1.0.0-beta04\res
+io.flutter.plugins.camera.camera_android-main-4 C:\Users\V1CK\AppData\Local\Pub\Cache\hosted\pub.dev\camera_android-0.10.9+1\android\src\main\res
+io.flutter.plugins.camera.camera_android-release-5 C:\Users\V1CK\AppData\Local\Pub\Cache\hosted\pub.dev\camera_android-0.10.9+1\android\src\release\res
+io.flutter.plugins.camera.camera_android-pngs-6 D:\Webapp\Project\watchshop\android\build\camera_android\generated\res\pngs\release
+io.flutter.plugins.camera.camera_android-resValues-7 D:\Webapp\Project\watchshop\android\build\camera_android\generated\res\resValues\release
+io.flutter.plugins.camera.camera_android-rs-8 D:\Webapp\Project\watchshop\android\build\camera_android\generated\res\rs\release
+io.flutter.plugins.camera.camera_android-mergeReleaseResources-9 D:\Webapp\Project\watchshop\android\build\camera_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.camera.camera_android-mergeReleaseResources-10 D:\Webapp\Project\watchshop\android\build\camera_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.camera.camera_android-merged_res-11 D:\Webapp\Project\watchshop\android\build\camera_android\intermediates\merged_res\release
+io.flutter.plugins.camera.camera_android-packaged_res-12 D:\Webapp\Project\watchshop\android\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\release

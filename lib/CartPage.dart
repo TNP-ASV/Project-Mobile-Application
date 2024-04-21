@@ -25,8 +25,13 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cart"),
-        leading: BackButton(),
+        title: const Text(
+          "Cart",
+          style: TextStyle(
+            fontFamily: 'MateSC',
+            fontSize: 24,
+          ),
+        ),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,
         elevation: 0,
@@ -34,7 +39,7 @@ class CartPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               Container(
@@ -43,16 +48,16 @@ class CartPage extends StatelessWidget {
                     itemCount: imageList.length,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(vertical: 15),
+                        margin: const EdgeInsets.symmetric(vertical: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Checkbox(
                               splashRadius: 30,
-                              activeColor: Color.fromRGBO(0, 96, 57, 100),
+                              activeColor: const Color.fromRGBO(0, 96, 57, 100),
                               value: true,
                               onChanged: (val) {},
                             ),
@@ -71,32 +76,35 @@ class CartPage extends StatelessWidget {
                               children: [
                                 Text(
                                   productTitles[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.black87,
                                     fontWeight: FontWeight.w900,
                                     fontSize: 16,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
-                                SizedBox(height: 2),
-                                Text(
+                                const SizedBox(height: 2),
+                                const Text(
                                   "Oyster, 43 มม",
                                   style: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 14,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
-                                SizedBox(height: 2),
+                                const SizedBox(height: 2),
                                 Text(
                                   prices[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Color.fromRGBO(0, 96, 57, 100),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w900,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
                               ],
                             ),
-                            Row(
+                            const Row(
                               children: [
                                 Icon(
                                   CupertinoIcons.minus,
@@ -108,6 +116,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
                                 SizedBox(width: 5),
@@ -122,14 +131,15 @@ class CartPage extends StatelessWidget {
                       );
                     }),
               ),
-              SizedBox(height: 70),
+              const SizedBox(height: 70),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Select All",
+                  const Text("Select All",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
+                    fontFamily: 'MateSC',
                     ),
                   ),
                   Checkbox(
@@ -140,11 +150,11 @@ class CartPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(
+              const Divider(
                 height: 20,
                 thickness: 1,
                 color: Colors.black),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -152,6 +162,7 @@ class CartPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
+                      fontFamily: 'MateSC',
                   ),
                   ),
                   Text(
@@ -160,20 +171,21 @@ class CartPage extends StatelessWidget {
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
                       color: Color.fromRGBO(0, 96, 57, 100),
+                      fontFamily: 'MateSC'
                     ),
                   )
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               InkWell(
                 onTap: (){},
                 child: ContainerButtonModel(
                   itext: "Checkout",
                   containerWidth: MediaQuery.of(context).size.width,
-                  bgColor: Color.fromRGBO(0, 96, 57, 100),
+                  bgColor: const Color.fromRGBO(0, 96, 57, 100),
                   ),
               ),
-              SizedBox(height: 20,)
+              const SizedBox(height: 20,)
             ],
           ),
         ),

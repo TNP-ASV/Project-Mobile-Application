@@ -1,13 +1,12 @@
+import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:watchshop/Homepage.dart';
 import 'package:watchshop/Loginpage.dart';
-import 'package:watchshop/Registerpage.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 class ProfilePage extends StatefulWidget {
@@ -51,7 +50,7 @@ class _ProfilePageState extends State<ProfilePage> {
         .get();
   }
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -62,9 +61,12 @@ class _ProfilePageState extends State<ProfilePage> {
           icon: const Icon(LineAwesomeIcons.angle_left),
         ),
         centerTitle: true,
-        title: Text(
-              "Profile",
-                style: Theme.of(context).textTheme.headlineLarge!.copyWith(fontFamily: 'MateSC'),
+        title: const Text(
+          "Profile",
+                style: TextStyle(
+          fontFamily: 'MateSC',
+          fontSize: 24, 
+        ),
         ),
       ),
       body: FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
@@ -99,47 +101,47 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton.icon(
-                    onPressed: () {
-                      _showImagePicker(context);
-                    },
-                    icon: const Icon(Icons.camera_alt),
-                    label: const Text("Change Profile Picture",
-                    style: TextStyle(
-                    fontFamily: 'MateSC',
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.normal,
-                   ),
+                      onPressed: () {
+                        _showImagePicker(context);
+                      },
+                      icon: const Icon(Icons.camera_alt),
+                      label: const Text(
+                        "Change Profile Picture",
+                        style: TextStyle(
+                          fontFamily: 'MateSC',
+                        ),
+                      ),
                     ),
-                  ),
                   const SizedBox(height: 20),
                   Text(
-                    user['name'],
-                    style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                          fontFamily: 'MateSC',
-                          fontSize: 32,
-                          fontWeight: FontWeight.normal,
-                        ),
-                  ),
+                user['name'],
+                style: const TextStyle(
+                  fontFamily: 'MateSC',
+                  fontSize: 24, // Adjust the font size as needed
+                ),
+              ),
                   const SizedBox(height: 20),
                   const Divider(),
                   ListTile(
                     leading: const Icon(LineAwesomeIcons.user),
-                    title: Text("Name: ${user['name']}",
-                    style: TextStyle(
-                    fontFamily: 'MateSC',
-                    fontSize: 16.0, 
-                    fontWeight: FontWeight.normal, 
-                  ),),
+                    title: Text(
+                      "Name: ${user['name']}",
+                      style: const TextStyle(
+                        fontFamily: 'MateSC',
+                        fontSize: 18, // Adjust the font size as needed
+                      ),
+                    ),
                   ),
                   const Divider(),
                   ListTile(
                     leading: const Icon(LineAwesomeIcons.envelope),
-                    title: Text("Email: ${user['email']}",
-                    style: TextStyle(
-                    fontFamily: 'MateSC',
-                    fontSize: 16.0, 
-                    fontWeight: FontWeight.normal, 
-                  ),),
+                    title: Text(
+                      "Email: ${user['email']}",
+                      style: const TextStyle(
+                        fontFamily: 'MateSC',
+                        fontSize: 18,
+                    ),
+                  ),
                   ),
                   const Divider(),
                   ListTile(
@@ -149,10 +151,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     leading: const Icon(LineAwesomeIcons.alternate_sign_out),
                     title: const Text(
                       "Logout",
-                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0),
-                      fontFamily: 'MateSC',
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.normal,
+                      style: TextStyle(
+                        fontFamily: 'MateSC',
+                        fontSize: 18,
                       ),
                     ),
                   ),
@@ -169,50 +170,75 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-   void _showImagePicker(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text("Choose an option"),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                ListTile(
-                  leading: const Icon(Icons.camera),
-                  title: const Text('Camera'),
-                  onTap: () {
-                    _takeImage(context);
-                    Navigator.of(context).pop();
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.image),
-                  title: const Text('Gallery'),
-                  onTap: () {
-                    _getImage(context, ImageSource.gallery);
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ],
-            ),
+  void _showImagePicker(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text(
+          "Choose an option",
+          style: TextStyle(
+            fontFamily: 'MateSC',
           ),
-        );
-      },
-    );
-  }
+        ),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.camera),
+                title: const Text(
+                  'Camera',
+                  style: TextStyle(
+                    fontFamily: 'MateSC',
+                  ),
+                ),
+                onTap: () {
+                  _takeImage(context);
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.image),
+                title: const Text(
+                  'Gallery',
+                  style: TextStyle(
+                    fontFamily: 'MateSC',
+                  ),
+                ),
+                onTap: () {
+                  _getImage(context, ImageSource.gallery);
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+
 
   void _getImage(BuildContext context, ImageSource source) async {
     final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: source); // Use the 'source' parameter
+    final pickedFile = await picker.pickImage(source: source);
 
     if (pickedFile != null) {
-      String imagePath = pickedFile.path;
-      // Update the 'profile_picture' field in Firestore with the new image URL
+      File imageFile = File(pickedFile.path);
+
+      // Upload image to Firebase Storage
+      Reference storageReference = FirebaseStorage.instance.ref().child('profile_pictures/${currentUser!.email}.jpg');
+      UploadTask uploadTask = storageReference.putFile(imageFile);
+      await uploadTask.whenComplete(() => null);
+
+      // Get the download URL of the uploaded image
+      String downloadURL = await storageReference.getDownloadURL();
+
+      // Update the 'profile_picture' field in Firestore with the download URL
       await FirebaseFirestore.instance
           .collection("Users")
           .doc(currentUser!.email)
-          .update({'profile_picture': imagePath});
+          .update({'profile_picture': downloadURL});
 
       // Refresh the UI to display the new profile picture
       setState(() {});
@@ -222,22 +248,32 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   void _takeImage(BuildContext context) async {
-    try {
-      await _initializeCameraFuture;
-      final XFile imageFile = await _cameraController.takePicture();
+  try {
+    await _initializeCameraFuture;
+    final XFile imageFile = await _cameraController.takePicture();
 
-      // Update the 'profile_picture' field in Firestore with the new image URL
-      await FirebaseFirestore.instance
-          .collection("Users")
-          .doc(currentUser!.email)
-          .update({'profile_picture': imageFile.path});
+    File file = File(imageFile.path);
 
-      // Refresh the UI to display the new profile picture
-      setState(() {});
-    } catch (e) {
-      print('Error taking picture: $e');
-    }
+    // Upload image to Firebase Storage
+    Reference storageReference = FirebaseStorage.instance.ref().child('profile_pictures/${currentUser!.email}.jpg');
+    UploadTask uploadTask = storageReference.putFile(file);
+    await uploadTask.whenComplete(() => null);
+
+    // Get the download URL of the uploaded image
+    String downloadURL = await storageReference.getDownloadURL();
+
+    // Update the 'profile_picture' field in Firestore with the download URL
+    await FirebaseFirestore.instance
+        .collection("Users")
+        .doc(currentUser!.email)
+        .update({'profile_picture': downloadURL});
+
+    // Refresh the UI to display the new profile picture
+    setState(() {});
+  } catch (e) {
+    print('Error taking picture: $e');
   }
+}
 
   void _signOut(BuildContext context) async {
     try {

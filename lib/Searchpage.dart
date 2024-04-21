@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:watchshop/Homepage.dart';
 import 'package:iconly/iconly.dart';
-import 'package:basf_flutter_components/basf_flutter_components.dart';
-import 'package:watchshop/Homepage.dart';
+// import 'package:watchshop/Homepage.dart';
 
 class Searchpage extends StatefulWidget {
   const Searchpage({Key? key}) : super(key: key);
@@ -27,14 +26,14 @@ class _SearchpageState extends State<Searchpage> {
               Container(
                 color: Colors.white,
                 child: Padding(
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
                       IconButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: Icon(Icons.arrow_back_ios),
+                        icon: const Icon(Icons.arrow_back_ios),
                       ),
                       Expanded(
                         child: TextFormField(
@@ -52,9 +51,11 @@ class _SearchpageState extends State<Searchpage> {
                               color: Color.fromRGBO(0, 96, 57, 100),
                             ),
                             hintText: "Search your Product",
+                            hintStyle: const TextStyle(
+                            fontFamily: 'MateSC',),
                             filled: true,
                             suffixIcon: IconButton(
-                              icon: Icon(Icons.cancel_sharp),
+                              icon: const Icon(Icons.cancel_sharp),
                               onPressed: () {
                                 searchController.clear();
                               },
@@ -83,15 +84,18 @@ class _SearchpageState extends State<Searchpage> {
               Container(
                 width: double.infinity,
                 color: Colors.white,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Search Suggestion",
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: TextStyle(
+                      fontFamily: 'MateSC',
+                      fontSize: 24, 
                     ),
-                    SizedBox(
+                    ),
+                    const SizedBox(
                       height: 24
                     ),
                     Row(
@@ -130,11 +134,11 @@ class _SearchpageState extends State<Searchpage> {
           },
           child: Row(
             children: [
-              Icon(
+              const Icon(
                 IconlyLight.time_circle,
                 color: Colors.grey, // Assuming SecondaryText is a custom color
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Text(
                 HomePage.previousSearchItem[index],
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.black), // Assuming mainText is a custom color
@@ -153,9 +157,9 @@ class _SearchpageState extends State<Searchpage> {
 
   Widget SearchSuggestionsItem(String text) {
     return Container(
-      margin: EdgeInsets.only(left: 20),
+      margin: const EdgeInsets.only(left: 20),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      decoration: BoxDecoration(color: Color.fromARGB(255, 209, 209, 209), borderRadius: BorderRadius.circular(30)),
+      decoration: BoxDecoration(color: const Color.fromARGB(255, 209, 209, 209), borderRadius: BorderRadius.circular(30)),
       child: Text(
         text,
         style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.black),

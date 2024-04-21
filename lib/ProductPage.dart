@@ -1,8 +1,8 @@
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+// import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:watchshop/product_details_popup.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 
 class ProductPage extends StatelessWidget {
   List<String> images = [
@@ -15,8 +15,14 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Product"),
-        leading: BackButton(),
+          title: const Text(
+            "Product",
+            style: TextStyle(
+            fontFamily: 'MateSC', 
+            fontSize: 24, // Adjust the font size as needed
+            ),
+          ),
+        leading: const BackButton(),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,
         elevation: 0,
@@ -25,7 +31,7 @@ class ProductPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +45,7 @@ class ProductPage extends StatelessWidget {
                     isAssets: true,
                   ),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
@@ -47,16 +53,19 @@ class ProductPage extends StatelessWidget {
                       children: [
                         SizedBox(height: 30),
                         Text(
-                          "Rolex Oyster Perpetual",
-                          style: TextStyle(
+                            "Rolex Oyster Perpetual",
+                            style: TextStyle(
+                              fontFamily: 'MateSC',
                               color: Colors.black87,
                               fontWeight: FontWeight.w900,
-                              fontSize: 22),
-                        ),
+                              fontSize: 22,
+                            ),
+                          ),
                         SizedBox(height: 5),
                         Text(
                           "Submariner",
                           style: TextStyle(
+                            fontFamily: 'MateSC',
                             color: Colors.black54,
                             fontWeight: FontWeight.w500,
                           ),
@@ -68,12 +77,13 @@ class ProductPage extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 22,
+                          fontFamily: 'MateSC',
                           color: Color.fromRGBO(0, 96, 57, 100)),
                     )
                   ],
                 ),
-                SizedBox(height: 10),
-                Align(
+                const SizedBox(height: 10),
+                const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "นาฬิกาสำหรับนักดำน้ำโดยแท้จริงในฐานะเครื่องมือเพื่อการอยู่รอดใต้น้ำนาฬิกาเรือนนี้ได้รับการออกแบบมาเพื่อตอบสนองต่อความต้องการของนักดำน้ำโดยเฉพาะ",
@@ -81,10 +91,11 @@ class ProductPage extends StatelessWidget {
                       color: Colors.black54,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
+                      fontFamily: 'MateSC',
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -92,10 +103,10 @@ class ProductPage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(31, 71, 71, 71),
+                        color: const Color.fromARGB(31, 71, 71, 71),
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Icon(
                           Icons.shopping_cart,
                           color: Color.fromRGBO(0, 96, 57, 100),
@@ -107,10 +118,10 @@ class ProductPage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(31, 71, 71, 71),
+                        color: const Color.fromARGB(31, 71, 71, 71),
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Icon(
                           Icons.favorite,
                           color: Color.fromRGBO(0, 96, 57, 100),

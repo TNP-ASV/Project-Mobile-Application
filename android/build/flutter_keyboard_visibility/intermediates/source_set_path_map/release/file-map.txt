@@ -1,0 +1,12 @@
+com.jrai.flutter_keyboard_visibility-jetified-annotation-experimental-1.1.0-0 C:\Users\V1CK\.gradle\caches\transforms-3\257e0bb88528f5fc66bfd853728809aa\transformed\jetified-annotation-experimental-1.1.0\res
+com.jrai.flutter_keyboard_visibility-jetified-window-1.0.0-beta04-1 C:\Users\V1CK\.gradle\caches\transforms-3\6582e67aea0be70979c64a0bfb01e347\transformed\jetified-window-1.0.0-beta04\res
+com.jrai.flutter_keyboard_visibility-core-1.6.0-2 C:\Users\V1CK\.gradle\caches\transforms-3\974b4f2252348b5ef43741b27d416a49\transformed\core-1.6.0\res
+com.jrai.flutter_keyboard_visibility-jetified-window-java-1.0.0-beta04-3 C:\Users\V1CK\.gradle\caches\transforms-3\9b0dd0bee9a81680af20f56797c52ab1\transformed\jetified-window-java-1.0.0-beta04\res
+com.jrai.flutter_keyboard_visibility-main-4 C:\Users\V1CK\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_keyboard_visibility-6.0.0\android\src\main\res
+com.jrai.flutter_keyboard_visibility-release-5 C:\Users\V1CK\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_keyboard_visibility-6.0.0\android\src\release\res
+com.jrai.flutter_keyboard_visibility-pngs-6 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\generated\res\pngs\release
+com.jrai.flutter_keyboard_visibility-resValues-7 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\generated\res\resValues\release
+com.jrai.flutter_keyboard_visibility-rs-8 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\generated\res\rs\release
+com.jrai.flutter_keyboard_visibility-mergeReleaseResources-9 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.jrai.flutter_keyboard_visibility-mergeReleaseResources-10 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.jrai.flutter_keyboard_visibility-merged_res-11 D:\Webapp\Project\watchshop\android\build\flutter_keyboard_visibility\intermediates\merged_res\release

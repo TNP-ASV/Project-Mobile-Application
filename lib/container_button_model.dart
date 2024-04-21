@@ -5,8 +5,12 @@ class ContainerButtonModel extends StatelessWidget {
   final double? containerWidth;
   final String itext;
 
-  const ContainerButtonModel(
-      {super.key, this.bgColor, this.containerWidth, required this.itext});
+  const ContainerButtonModel({
+    Key? key, // Fixed the super.key
+    this.bgColor,
+    this.containerWidth,
+    required this.itext,
+  }) : super(key: key); // Added super(key: key)
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +24,6 @@ class ContainerButtonModel extends StatelessWidget {
       child: Center(
         child: Text(
           itext,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-          ),
         ),
       ),
     );

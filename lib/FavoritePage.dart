@@ -23,16 +23,17 @@ class FavoritePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorite"),
-        leading: BackButton(),
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
-        elevation: 0,
-        centerTitle: true,
+          title: const Text(
+            "Favorite",
+            style: TextStyle(
+              fontFamily: 'MateSC',
+              fontSize: 24, 
+            ),
+          ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               Container(
@@ -41,10 +42,10 @@ class FavoritePage extends StatelessWidget {
                     itemCount: imageList.length,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(vertical: 20),
+                        margin: const EdgeInsets.symmetric(vertical: 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -63,27 +64,30 @@ class FavoritePage extends StatelessWidget {
                               children: [
                                 Text(
                                   productTitles[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.black87,
                                     fontWeight: FontWeight.w900,
                                     fontSize: 16,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
-                                SizedBox(height: 2),
-                                Text(
+                                const SizedBox(height: 2),
+                                const Text(
                                   "Oyster, 43 มม",
                                   style: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 14,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
-                                SizedBox(height: 2),
+                                const SizedBox(height: 2),
                                 Text(
                                   prices[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Color.fromRGBO(0, 96, 57, 100),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w900,
+                                    fontFamily: 'MateSC',
                                   ),
                                 ),
                               ],
@@ -92,10 +96,10 @@ class FavoritePage extends StatelessWidget {
                               height: 60,
                               width: 60,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(31, 71, 71, 71),
+                                color: const Color.fromARGB(31, 71, 71, 71),
                                 borderRadius: BorderRadius.circular(30),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Icon(
                                   Icons.favorite,
                                   color: Color.fromRGBO(0, 96, 57, 100),
