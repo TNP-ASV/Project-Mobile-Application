@@ -34,5 +34,5 @@ Luxuria Watch เป็นแอปพลิเคชันที่มุ่ง
 
 ## ผู้จัดทำ
 
-Luxuria Watch ถูกออกแบบขึ้นโดยทีมผู้พัฒนาซอฟต์แวร์ นักศึกษามหาวิทยาลัยมหิดล เพื่อประกอบโครงงานรายวิชา ITDS283 Mobile Application Development
+Luxuria Watch ถูกออกแบบขึ้นโดย นักศึกษามหาวิทยาลัยมหิดล เพื่อประกอบโครงงานรายวิชา ITDS283 Mobile Application Development
 รายชื่อผู้จัดทำ Nuttakit Iamchamlert 6587014 , Tanapat Asavanapanon 6587016
